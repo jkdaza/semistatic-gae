@@ -1,0 +1,11 @@
+{% macro render_editable(id, page_id, class='editable') -%}
+	<div id="{{ id }}" class="{{ class }}"{% if userisadmin %} contenteditable="true"{% endif %}
+		{% if editable[id] and 'key' in editable[id] %}data-key="{{ editable[id].key }}"{% endif %}
+		data-pageid="page_id">
+		{% if editable[id] %}
+			editable[id].content
+		{% else %}
+		    {{ caller() }}
+		{% endif %}
+	</div>
+{%- endmacro %}

@@ -1,0 +1,33 @@
+{% import 'macros/elements.html' as elements with context %}
+{% import 'macros/editable.html' as editable_macro with context %}
+<section id="{% block section_id %}inspiration{% endblock section_id%}">
+	
+	<div class="container">
+	    <div class="row">
+	        <div class="col-md-2 text-center">
+	        </div>
+	        <div class="col-md-8 parag-text">
+	        	
+	        		{{ elements.logo() }}
+	        		{% block section_top_menu %}
+	        			{{ elements.section_menu(subsect=[]) }}
+	        		{% endblock%}
+	        		
+	        		{% block section_full_text %}
+	        			
+	        		{% endblock%}
+	        		
+	        		{% block section_single_text %}
+	        			
+	        		{% endblock%}
+	        </div>
+	        <div class="col-md-2 text-center drawing-column">
+	        	{% block section_drawing %}
+	        	
+	        	{% endblock section_drawing%}
+	        </div>
+	    </div>
+	</div>
+	
+</section>
+<div class="section-foot-upper"></div>

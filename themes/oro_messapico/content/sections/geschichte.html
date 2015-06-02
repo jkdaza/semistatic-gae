@@ -1,0 +1,144 @@
+{% extends "sections/section_base.html" %}
+
+{% set subsect_items = [
+	('geschichte-frutto','Kulturgeschichte einer Frucht'),
+	('geschichte-messapi','Die Messapier'),
+	('geschichte-apulia','Ölregion Apulien')
+] %}
+
+{% block section_id %}geschichte{% endblock section_id%}
+
+{% block section_top_menu %}
+	{{ elements.section_menu(subsect=subsect_items) }}
+{% endblock%}
+
+{% block section_full_text %}
+
+{# Subsection 1 #}
+<div id="{{subsect_items[0][0]}}" class="subsection">
+<h4 class="hidden">{{subsect_items[0][1]}}</h4>
+{% call editable_macro.render_editable(subsect_items[0][0]+'-first-parag', class='editable first-parag',
+									node='p', append=elements.read_btn("more")) %}
+Der Ölbaum begleitet die Menschheitsgeschichte schon sehr lange und reicht bis in die Antike zurück. 
+Es existieren Versteinerungen die den Olivenbaum darstellen aus dem Jahre 12.000 v. C. in Nord-Afrika 
+sowie zahlreiche Höhlenmalereien in der Sahara, in Spanien und auf Kreta. 
+{% endcall %}
+
+{% call editable_macro.render_editable(subsect_items[0][0]+'-hidden-parag-', class='editable hidden-parag', 
+								append=elements.read_btn("less")) %}
+<p>Der tatsächliche Ursprung des Ölbaums ist aber ungewiß. Man vermutet seine Herkunft aus Kleinasien, also zwischen 
+	Kaukasus, den iranischen Hochebenen und den Küsten Syriens und Palästinas. Der heutige Olivenbaum (Olea europea) 
+	entspringt der Wildform (Oleaster), von der versteinerte Blätter gefunden wurden. Diese archäologischen Funde 
+	deuten darauf hin, daß die Wildform wahrscheinlich um ca. 6000 v. Chr. in Kreta und Syrien zur fruchtbaren Öl-Olive 
+	kultiviert wurde und sich von dort aus im gesamten Mittelmeerraum verbreitet hat. In Apulien hat es bereits im 
+	Neolithikum (Jungsteinzeit) um ca. 5000 v. Chr. die ersten wilden Ölbäume gegeben. Sie wurden im heutigen 
+	Torre a Mare südlich von Bari und bei Fasano nördlich von Brindisi entdeckt. Diese Entdeckungen weisen darauf hin, 
+	daß Öl und Oliven schon damals zu den Nahrungsmitteln der Menschen gehört haben können.</p>
+	<p>In Ägypten war es die Göttin Isis, die Mutter der Erde (griech. Demeter), die den Menschen das Geheimnis des 
+		Ölbaums verriet. Damals galt Olivenöl als flüssiges Gold, das vor allem zur Schönheitspflege verwendet wurde. 
+		Die Ägypter kannten schon etliche Anwendungen inklusive die Herstellung von Seife. Laut griechischer Mythologie 
+		war es aber Athene, die den ersten Ölbaum pflanzte. Seine Früchte sollten der Menschheit einen wundervollen 
+		Saft (Elaion) schenken, der Nahrung, Heilung, Körperpflege, Licht und Wärme spendete. Für die Griechen war der 
+		Ölbaum ein Heiligtum und jeder der einen Baum beschädigte oder entwurzelte wurde mit dem Exil bestraft. 
+		Die Römer übernahmen Mythos und Anwendung von den Griechen und begannen mit dem systematischen Anbau von 
+		Olivenbäumen und der kommerziellen Verbreitung von Olivenöl. Selbst noch im Mittelalter wurde Olivenöl 
+		für alle Schichten als Heilmittel oder Medizin eingesetzt, jedoch wurde der Ölbaum in Europa mit den ketzerischen 
+		Religionen aus dem Mittelmeerraum (Judentum und Islam etc.) in Verbindung gebracht und verlor deshalb an 
+		kulturellem Wert. Die Olivenpflanzungen verschwanden fast gänzlich, einzig in den Klöstern der Benediktiner 
+		und Zisterzienser wurden einige wenige Olivenbäume kultiviert.</p>
+	<p>Heute wird dem Ölbaum und Olivenöl vor allem aus ernährungstechnischer und medizinischer Sicht ein zunehmend 
+		hoher Wert beigemessen. Haben doch zahlreiche Untersuchungen und Analysen etliche Vorzüge für das menschliche 
+		Wohlbefinden bewiesen, die ihm schon von alters her unterstellt wurden.
+	</p>
+{% endcall %}
+</div>
+
+{# Subsection 2 #}
+
+<div id="{{subsect_items[1][0]}}" class="subsection">
+<h4>{{subsect_items[1][1]}}</h4>
+{% call editable_macro.render_editable(subsect_items[1][0]+'-first-parag', class='editable first-parag',
+									node='p', append=elements.read_btn("more")) %}
+Im Anschluß an die Bronzezeit (1200 v. Chr.) lebte in Apulien das Volk der Messapier. 
+Sie bewohnten vor allem den südlichen Teils Apulien‘s - also die Gegend um die heutigen Städte Tarent, 
+Brindisi und Lecce. Sie waren ein Volk von Bauern und Schäfern, berühmt auch als geschickte Pferdezüchter, 
+als ausdauernde Kämpfer und als Bogenschützen.  
+{% endcall %}
+
+{% call editable_macro.render_editable(subsect_items[1][0]+'-hidden-parag-', class='editable hidden-parag', 
+								append=elements.read_btn("less")) %}
+<p>Die Herkunft der Messapier ist umstritten. Man vermutet, daß der Name Messapier "Volk zwischen zwei Meeren" 
+	bedeutet, weil sie sich im heutigen Salento, zwischen der Adria und dem Ionischen Meer niedergelassen hatten. 
+	Sie vermischten sich mit der anwesenden Bevölkerung und gründeten so die ersten Städte z.B. Brention/Brentesion 
+	(Brindisi), Kaìlia (Ceglie Messapica), Mandyrion (Manduria), Orra (Oria), Gnathia (Egnazia), Carbina (Carovigno) 
+	und Sturnium (Ostuni), wo sie ihre Gebräuche und Sitten einführten. Nach dem griechischen Historiker Herodot 
+	stammten die Messapier, die ein einheitliches und kompaktes Volk gewesen seien, von den Kretern ab. Er brachte 
+	sie sogar mit dem mythischen König Minos von Kreta in Verbindung. Heute meint man jedoch, daß die Messapier aus 
+	Illyrien stammten und daß sie um 1000 v. Chr. nach Apulien gekommen seien.</p>
+<p>Die Wirtschaft der Messapier basierte zum einen auf landwirtschaftliche Produktion, wie z. B. Oliven 
+	(damals sehr ähnlich der Wildoliven), Wein, Hülsenfrüchte und Gemüse, zum anderen auf den Handel. 
+	Auch wenn die Verwendung von Olivenöl seit Urzeiten bekannt ist, waren es wahrscheinlich die Messapier, 
+	die als erste die Olivenkultur in Apulien einführten. Tatsächlich ist ab dem 7.Jhd.v.Chr. 
+	in Apulien die erste systematische Pflanzung des heutigen Ölbaums dokumentiert.</p>
+<p>Der römische Agronom Lucius Iunius Moderatus Columella (1. Jh. n. Chr.) war der erste Römer, 
+	der wie kein anderer in seinem Werk ‚De Re Rustica‘ über den damaligen Stand agrarischen Wissens und 
+	Wirtschaftens informiert. Es handelt sich um das umfangreichste Sachbuch, das in Rom jemals über ein einzelnes, 
+	in sich geschlossenes Sachgebiet geschrieben worden ist. Columella erwähnt eine Ebene nördlich vom heutigen 
+	Brindisi, wo die sogenannte “salentina” Olive angebaut wurde, die heute mit der autochthonen Ogliarola del 
+	Salento gleichgesetzt wird. Er erwähnt die Technik der Pflanzung von Olivenbäumen in regelmäßigen Reihen mit 
+	Pflanzen, die sich in einer Entfernung von 60 Fuss (= 18 m) befinden und genau das finden wir in den alten 
+	Olivenhainen, die sich in der Nähe der römischen Via Traiana befinden. Ebenfalls erwähnt er die Größe und den 
+	Umfang der Bäume, was darauf hinweist, daß Columella bereits Bäume vorgefunden hat, die mehrere Jahrhunderte 
+	alt waren und zu Zeiten der Messapier kultiviert worden waren.
+</p>
+{% endcall %}
+</div>
+
+{# Subsection 3 #}
+
+<div id="{{subsect_items[2][0]}}" class="subsection">
+<h4>{{subsect_items[2][1]}}</h4>
+{% call editable_macro.render_editable(subsect_items[2][0]+'-first-parag', class='editable first-parag',
+									node='p', append=elements.read_btn("more")) %}
+Die Region Apulien ist heute mit ca. 51 % der nationalen Produktion führender Hersteller von Olivenöl der 
+Kategorie extra vergine und besitzt mit ca. 60 Millionen Olivenbäumen die weltweit höchste Konzentration an 
+mehrfach tausendjährigen Bäumen (ca. 10% des Gesamtbestands). Somit zählen die Olivenhaine Apuliens zu den 
+ältesten Baum-Kulturlandschaften des Mittelmeerraums und bilden ein komplexes System das über Jahrtausende 
+hinweg Kulturgeschichte, Natur und Landwirtschaft harmonisch miteinander verflochten hat.
+{% endcall %}
+
+{% call editable_macro.render_editable(subsect_items[2][0]+'-hidden-parag-', class='editable hidden-parag', 
+								append=elements.read_btn("less")) %}
+<p>Entlang der antiken römischen Via Traiana, die 109 n. Chr. von Kaiser Trajan gebaut wurde, befinden sich unzählige 
+	historische Masserien (Gutshöfe) mit  unterirdischen Ölmühlen aus messapisch-römischer Zeit. Die  Nähe zur Via 
+	Traiana erlaubte den Transport des „flüssigen Golds“ und förderte den Handel mit dem Orient, sowie die 
+	wirtschaftliche und landschaftliche Entwicklung in diesem Abschnitt Apuliens. Viele unterirdische Mühlen 
+	waren größtenteils bis Mitte des 18.Jhd.s in Betrieb bis man begann oberirdische Mühlen zu bauen, die 
+	funktioneller und produktiver waren.</p>
+<p>Um das geschichtliche, anthropologische und landschaftliche  Kulturgut ‚Olivenbaum‘ zu schützen und seiner 
+	illegalen Vermarktung und Auspflanzung entgegenzuwirken, hat der regionale Rat im Jahre 2007 das erste und 
+	einzige Gesetz Italiens verabschiedet (Regionalgesetz N° 14 zum &ldquo;Schutz und Aufwertung der monumentalen 
+	Olivenhaine Apuliens&rdquo;). Insbesondere wurden die monumentalen Olivenbäume, die mehrere hundert bzw. 
+	tausend Jahre alt sind, mit einer numerierten Plakette versehen und ihr Standort mittels GPS Daten lokalisiert 
+	und registriert.
+	</p>
+{% endcall %}
+</div>
+
+
+{% endblock%}
+
+
+	        		
+{% block section_text_first %}
+	
+{% endblock section_text_first %}
+
+{% block section_text_more %}
+
+{% endblock section_text_more %}
+
+
+{% block section_drawing %}
+	{{ elements.drawing(name="fiore") }}
+{% endblock section_drawing%}

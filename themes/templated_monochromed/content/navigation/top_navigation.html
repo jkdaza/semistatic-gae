@@ -1,0 +1,15 @@
+{% set active_page = active_page|default(homepage) -%}
+{% set navigation = [
+    ('/', 'home', 'Home'),
+    ('/about', 'about', 'About'),
+    ('/contact', 'contact', 'Contact')
+] -%}
+
+<nav id="nav">
+	<ul>
+		{% for href, id, caption in navigation %}
+		  <li {% if id == active_page %} class="active" {% endif %}>
+		  <a href="{{ href|e }}">{{ caption|e }}</a></li>
+		{% endfor %}
+	</ul>
+</nav>

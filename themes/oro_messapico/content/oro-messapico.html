@@ -1,0 +1,19 @@
+{% extends "layout/base.html"%}
+
+{% block title %}La cultura dell'olio d'oliva | Oro Messapico{% endblock%}
+
+{% block header %}{% endblock%}
+
+{% block lower_title %}{% endblock%}
+
+{% block page_content %}
+ <!-- Include Sections -->
+	{% for href, id, caption in navigation %}
+		{% set section_temp = "sections/" + id + ".html" %}
+	  {% include section_temp ignore missing with context %}
+	{% endfor %}
+{% endblock %}
+
+{% block footer %}
+	{{ elements.section_footer() }}
+{% endblock%}

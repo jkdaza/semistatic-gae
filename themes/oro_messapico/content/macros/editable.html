@@ -1,0 +1,11 @@
+{% macro render_editable(id, class='editable',node='div', append='') -%}
+	<{{node}} id="{{ id }}" class="{{ class }}"{% if globals.user_is_admin %} contenteditable="true"{% endif %}
+		{% if editables[id] and 'key' in editables[id] %}data-key="{{ editables[id].key }}"{% endif %}>
+		{% if editables[id] %}
+			{{ editables[id].content|safe }}
+		{% else %}
+		    {{ caller() }}
+		{% endif %}
+		{{ append|safe }}
+	</{{node}}>
+{%- endmacro %}

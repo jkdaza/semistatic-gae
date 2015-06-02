@@ -1,0 +1,92 @@
+{% extends "layout/base.html"%}
+{% block title %}About Us | Oro Messapico{% endblock%}
+{% block page_content %}
+<section id="{% block section_id %}inspiration{% endblock section_id%}">
+	<div class="container">
+	    <div class="row">
+	        <div class="col-md-1 text-center">
+	        </div>
+	        <div class="col-md-10 parag-text">
+	        	
+	        		{{ elements.logo() }}
+							<div class="text-center lower-title">
+								<img src="{{theme}}/img/culturaolio-black.png" alt="Oro messapico - La Cultura dell'Olio d'Oliva" width="100%" />
+							</div>
+	        		
+	        		<div class="about-us-title text-center"><img alt="About Us" src="{{theme}}/img/link/about-us-black.png" height="50"/></div>
+	        		
+	        		{% call editable_macro.render_editable('about-us-first-parag', class='editable',
+									node='div') %}
+									
+	        		<p>Wir sind vier langjährige Freunde, die eine gemeinsame große Leidenschaft verbindet: <b>Olivenöl</b></p>
+							
+							<p>Silvija und Jürgen Schneider leben in Süddeutschland und organisieren von dort aus den Vertrieb; 
+								Ute und Mario Palmisano leben in Apulien/Italien und kümmern sich auf ihrem landwirt-schaftlichen 
+								Hof 'Giardini di Marzo' vor Ort um die Olivenhaine. Die Olivenernte ist einer der 
+								wichtigsten Momente im Jahr; seit fünf Jahren betreiben wir sie gemeinsam und haben dabei viele 
+								Erfahrungen in der Herstellung von Olivenöl sammeln können. Jahr für Jahr vergrößert sich der 
+								Kreis unserer Olivenölkunden und selbst zur Ernte kommen immer mehr begeisterte Erntehelfer 
+								aus unserem Freundeskreis dazu.</p>
+							
+							<p>Um einen lückenlosen Produktionsablauf und eine optimale und gleichbleibende Qualität 
+								unserer Olivenöle zu garantieren, übernehmen und überwachen wir persönlich den gesamten 
+								Produktionsablauf. D.h. von die Pflege der Ölbäume und des Bodens ausschließlich mit 
+								organischem Dünger (Eselsmist), dem regelmäßigen Baumschnitt mit katalysierter Motorsäge, 
+								die Olivenernte von Hand oder allenfalls mit batteriebetriebenen Handrechen, also ohne 
+								Dieselmotoren, bis zur die Verarbeitung der Oliven in unserem Beisein in einer Mühle unseres 
+								Vertrauens und die anschließende Abfüllung.</p>
+							
+							<p>Der Direktverkauf, bzw. der Verkauf mit ständiger, personalisierter Information über wenige 
+								selektionierte Händler, die uns persönlich kennen und unsere Philosophie unterstützen, läßt den 
+								Endverbraucher nicht einfach nur ein Produkt kaufen, sondern an seiner Realisierung teilhaben 
+								und dadurch ein Stück mediterraner Kulturgeschichte erwerben.</p>
+							
+							{% endcall %}
+	        		
+	        		
+	        </div>
+	        <div class="col-md-1 text-center drawing-column">
+	        </div>
+	    </div>
+	</div>
+</section>
+
+
+<div class="section-foot-upper"></div>
+{% endblock %}
+
+{% block footer %}
+<div class="container about-footer">
+	<div class="row contact-info">
+		<div class="col-xs-4 col-side text-left">
+			{{ elements.drawing(name="somaro-left") }}
+		</div>
+  	<div class="col-xs-4 col-middle text-center">
+			{{ elements.social_links(black=True) }}
+			{{ elements.drawing(name="foglie-up2") }}
+		</div>
+		<div class="col-xs-4 col-side text-right">
+			{{ elements.drawing(name="somaro-right") }}
+		</div>
+	</div>
+</div>
+
+
+<div class="about-us-closing">
+	<img src="{{theme}}/img/vassoio-white.png" alt="Oro Messapico" width="100%" />	
+</div>
+<footer>
+	<div class="container">
+	    <div class="row">
+	        <div class="col-xs-3 text-left">
+	            <p>credits</p>
+	        </div>
+	        <div class="col-xs-6"></div>
+	        <div class="col-xs-3 text-right">
+	            <p>oro messapico &copy; 2015</p>
+	        </div>
+	    </div>
+	</div>
+</footer>
+
+{% endblock%}

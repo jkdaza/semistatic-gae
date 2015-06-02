@@ -1,0 +1,18 @@
+{% extends "sections/section_base.html" %}
+{% block section_id %}gallery{% endblock section_id%}
+
+{% block section_single_text %}
+
+{% call editable_macro.render_editable(self.section_id()+'-first-parag', class='editable first-parag',
+									node='div') %}      		
+
+A youtube video.
+
+{% endcall %}
+
+<div class="embed-responsive embed-responsive-16by9" style="margin-top:50px;">
+  <iframe class="embed-responsive-item" width="1280" height="720" src="https://www.youtube.com/embed/4S5kkKahkg8?list=PL9CR_b-t1RunTmw_oUtPk-JPP_8boq0t9&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
+{% endblock%}

@@ -1,0 +1,156 @@
+{% extends "sections/section_base.html" %}
+
+{% set subsect_items = [
+	('faktur-terra','Baum &amp; Boden'),
+	('faktur-raccolta','Ernte'),
+	('faktur-trasform','Ölgewinnung')
+] %}
+
+{% block section_id %}oelmanufaktur{% endblock section_id%}
+
+{% block section_top_menu %}
+	{{ elements.section_menu(subsect=subsect_items) }}
+{% endblock%}
+
+{% block section_full_text %}
+
+{# Subsection 1 #}
+<div id="{{subsect_items[0][0]}}" class="subsection">
+<h4 class="hidden">{{subsect_items[0][1]}}</h4>
+{% call editable_macro.render_editable(subsect_items[0][0]+'-first-parag', class='editable first-parag',
+									node='p', append=elements.read_btn("more")) %}
+									
+&laquo;Die apulische Landschaft zu beschreiben ist so, als würde man ein Bild malen. Die 
+intensiven Farbkontraste aus dunkelroter Erde, blauem Himmel und Meer, weißgekalkten 
+Häusern und unendlichen, grünen Olivenhainen sind so extrem, wie die Menschen selbst.&raquo;
+{% endcall %}
+
+{% call editable_macro.render_editable(subsect_items[0][0]+'-hidden-parag-', class='editable hidden-parag', 
+								append=elements.read_btn("less")) %}
+								
+<p>Der Olivenbaum ist ein immergrüner Baum, der vor allem in Gebieten mit Meeresklima sehr gut gedeiht. Er 
+	liebt ein trockenes, heißes Mittelmeerklima und verträgt keine hohe Feuchtigkeit. Er ist ein extrem 
+	langlebiger Baum, der vor allem auf Kalkböden gut wächst. Die Lage Apuliens, fast wie eine Halbinsel im 
+	Mittelmeer ist ein ideales Gebiet für die Ölbaumkultur.</p>
+<p>Der Olivenbaum benötigt bestimmte thermische Bedingungen für seine Entwicklung. Er darf während der 
+	Blüte Ende Mai /Anfang Juni keinen Temperaturen unter 10 °C ausgesetzt sein, während der Fruchtbildung, 
+	der Reifung der Frucht (Verfärbung von grün-gelb zu dunkelblau) und um zur vollständigen Reifung zu 
+	gelangen nicht unter 15° C. Auch während der Ernte sollten 5° C nicht unterschritten werden.</p>
+<p>Die meisten Olivensorten, die in Apulien angebaut werden, können aufgrund ihrer spezifischen 
+	biologischen Anpassung als autochthon bezeichnet werden.  Alle Olivensorten haben besondere Merkmale 
+	in Bezug auf den Boden, das Klima und die Anbau-Methode entwickelt und sind das Ergebnis einer 
+	gezielten individuellen Auswahl kraftvoller und widerstandsfähiger Pflanzen. Generationen von 
+	Veredelungs- und Baumschnittexperten haben dazu beigetragen, eine Handwerkskunst die nirgendwo 
+	beschrieben ist, weiterzugeben und den Ölbaum Apuliens einzigartig zu gestalten</p>
+	<p>Die am häufigsten verbreiteten, lokalen Sorten gehören zur Gruppe der Ogliarole, die ihren Namen nach
+		den verschiedenen geographischen Bereichen Apuliens haben: Bari Ogliarola, Cima di Bitonto, Paisana, 
+		Cima di Mola e Ogliarola Salento. Dazu kommen Peranzana, Coratina und Cellina di Nardò.
+	</p>
+{% endcall %}
+</div>
+
+{# Subsection 2 #}
+
+<div id="{{subsect_items[1][0]}}" class="subsection">
+<h4>{{subsect_items[1][1]}}</h4>
+{% call editable_macro.render_editable(subsect_items[1][0]+'-first-parag', class='editable first-parag',
+									node='p', append=elements.read_btn("more")) %}
+&laquo;Wer einmal beobachtet hat, mit welcher Geduld, Liebe und Ehrfurcht die Früchte des 
+Olivenbaums abgeerntet werden, wird verstehen, daß man in manchen Regionen glaubt, 
+der Ertrag der Ernte sei abhängig von der Moral und der inneren Haltung der Pflücker&raquo;
+{% endcall %}
+
+{% call editable_macro.render_editable(subsect_items[1][0]+'-hidden-parag-', class='editable hidden-parag', 
+								append=elements.read_btn("less")) %}
+<p>Schon Colummella forderte die Pflückhelfer dazu auf, die Oliven zum Zeitpunkt der "Invaiatura" zu 
+	sammeln, da dies seiner Meinung nach der optimalste Zeitpunkt war um Grünes Öl (Oleum viride) 
+	zu produzieren.  Es wurde darauf hingewiesen, die Oliven einzeln von Hand vom Zweig zu pflücken 
+	und die Oliven, die in den Baumkronen nicht erreicht werden konnten, mit langen flexiblen 
+	Stöcken (griechisch Ractriai) vom Baum zu klopfen; aber sorgfältig darauf zu achten, daß die Oliven 
+	dabei nicht beschädigt wurden.</p>
+<p>Wir lieben ein kräftiges und pikant schmeckendes Öl mit ausgeprägtem Olivengeschmack! Deshalb 
+	beginnen wir bereits ab Mitte Oktober/ Anfang November  mit der Olivenernte und verzichten 
+	bewußt auf einen höheren Ertrag der bei einer späteren Ernte gegeben wäre. Die Oliven werden 
+	sowohl mit mechanischen Handrechen, vor allem bei den großen Bäumen, als auch mit kleinen 
+	Handrechen und Leitern direkt vom Baum abgeerntet. Zu diesem Zeitpunkt (die sog. Invaiatura) 
+	sind die Oliven noch nicht ganz reif sondern halbreif, also teilweise grün und teilweise 
+	blau/schwarz. Wenn wir warten würden, bis die reifen Früchte von alleine zu Boden fallen, wäre 
+	das Ernten erheblich einfacher. Aber je reifer die Oliven sind, desto höher ist der Säuregehalt und 
+	desto minderwertiger werden Qualität und Geschmack. Das Öl von halbreifen Früchten schmeckt 
+	viel fruchtiger und frischer und weißt den typischen scharf-bitteren Geschmack auf.</p>
+<p>Um qualitativ hochwertiges Öl zu produzieren, muß also der unbequemere und aufwendigere Weg 
+	des Pflückens eingeschlagen werden. Nur so werden die Oliven weniger beschädigt; denn wenn 
+	die Haut der Olive nicht mehr intakt ist, treten schädliche Oxidations- und Fermentationsprozesse 
+	ein, die die Qualität erheblich mindern. Ein weiterer Grund für das frühe Pflücken ist, daß das 
+	Herabfallen der Oliven durch ein Enzym gesteuert wird, das einen negativen Einfluß auf die 
+	Haltbarkeit des Olivenöls hat. Um ein hochqualitatives Olivenöl zu gewinnen, bringen wir die frisch 
+	geernteten Oliven  noch am selben Tag in die Ölmühle, wo sie innerhalb von maximal 24 Std. in 
+	rein mechanischem Verfahren zu Olivenöl verwandelt werden.
+</p>
+<p>Olivenöl aus Apulien ist bekannt für seinen intensiven, fruchtig scharfen Geschmack, der vor allem 
+von den angebauten Sorten bestimmt ist. Er erinnert an frisches Grün und fruchtige Oliven, ist 
+dabei ausgeprägt bitter und im Rachen oft so scharf, als wäre es Chiliöl. Ganz frisch und ungefiltert 
+aus der Presse ist das Öl leuchtend grün und hat so gar nichts gemein mit dem was man 
+normalerweise im Handel erhält.
+</p>
+{% endcall %}
+</div>
+
+{# Subsection 3 #}
+
+<div id="{{subsect_items[2][0]}}" class="subsection">
+<h4>{{subsect_items[2][1]}}</h4>
+{% call editable_macro.render_editable(subsect_items[2][0]+'-first-parag', class='editable first-parag',
+									node='p', append=elements.read_btn("more")) %}
+&laquo;Milde Oliven gibt es aber nicht, Oliven sind bitter und extrem scharf. Ein Olivenöl aus 
+frisch vom Baum gepflückten Oliven schmeckt dank der Antioxidantien und Phenole immer 
+scharf. Diese wichtigen Inhaltsstoffe halten nicht nur das Olivenöl, sondern auch uns 
+selbst frisch!&raquo;
+{% endcall %}
+
+{% call editable_macro.render_editable(subsect_items[2][0]+'-hidden-parag-', class='editable hidden-parag', 
+								append=elements.read_btn("less")) %}
+<p>
+Die Oliven werden in der Ölmühle zunächst gewogen, dann von Blättern und Zweigen gereinigt und 
+anschließend gewaschen. Je nach Olivenölsorte werden unsere Oliven entweder nach der alten 
+traditionellen Methode mit Mühlsteinen (ORO MESSAPICO PRIMITIVO) zermahlen und die daraus 
+entstehende dunkle Fruchtpaste durch Bastmatten (sog. Fiscoli) ausgepresst; oder in modernen 
+Extraktionsmühlen (ORO MESSAPICO EVOLUTION und ORO MESSAPICO MILLENNIUM )  zerkleinert und 
+anschließend das Öl-Wasser-Gemisch im sog. Horizontaldekanter von den Feststoffen getrennt. Es werden 
+immer auch die Kerne mit gemahlen, die einen nützlichen Konservierungsstoff enthalten und 
+Geschmacksträger sind. Bei beiden Methoden besteht die ausfließende  Flüssigkeit noch aus einem Öl-Wasser-Gemisch, 
+das erst im Separator durch Zentrifugieren in Öl und bitteres Fruchtwasser getrennt wird.
+</p>
+<p>
+Generell gilt, dass ein "Extra Vergine" Olivenöl immer nur aus erster Pressung stammt und während des 
+gesamten Prozesses das Öl nicht erhitzt wird. Es handelt sich also um ein sogenanntes kalt gepresstes 
+Olivenöl extra-vergine oder nativ. Je höher die Temperatur bei der Pressung wäre, desto mehr Öl könnte 
+gewonnen werden, dabei gingen aber allzu viele wertvolle Geschmacks- und Inhaltsstoffe verloren. Seit 
+dem der Begriff kalt gepresst im Gesetz verankert ist, darf die Temperatur nicht höher sein als 27°C.
+</p>
+<p>
+Unser Olivenöl wird nicht gefiltert, sondern dekantiert auf natürliche Weise und ist etwas trüber als 
+herkömmliches Olivenöl. Es hat einen ausgeprägten Charakter und einen Ölsäuregehalt, der weit unter dem 
+vom Gesetzgeber vorgegebenen maximalen Säuregehalt von 0,8 % liegt. Etikett oder Preis sagen wenig 
+über die Qualität aus, entscheidend sind Zeitpunkt und Art der Ernte, die Verarbeitung in der Mühle und 
+letztendlich der Geschmack. Ein gutes Olivenöl erkennt man am Geruch nach frischen Oliven und am 
+scharf-bitteren Geschmack (sog. Pizzico).
+<p>
+Dieser typische Geschmack verändert sich anfangs sehr rasch. Was nicht gleich nach der Ernte abgefüllt 
+wurde, reift in großen Edelstahlfässern heran, während sich die Schwebestoffe absetzen. Die Farbe 
+wechselt allmählich von Giftgrün zu Goldgelb. Der Geschmack wird harmonischer, runder, das dominante 
+Bittere verschwindet, dafür rücken jetzt die feineren Fruchtaromen deutlicher in den Vordergrund. Generell 
+gilt, dass Olivenöl sich unentwegt verändert, zwar langsam aber doch stetig. Aus diesem Grund ist es auch 
+wichtig, Olivenöl immer licht- und luftgeschützt aufzubewahren und Temperaturschwankungen zu 
+vermeiden. Nur so werden schädliche Oxidationsprozesse, die das Öl viel schneller altern ließen, verhindert.
+</p>
+{% endcall %}
+</div>
+
+
+{% endblock%}
+
+
+{% block section_drawing %}
+	{{ elements.drawing(name="foglie") }}
+{% endblock section_drawing%}

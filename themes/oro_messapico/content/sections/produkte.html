@@ -1,0 +1,46 @@
+{% extends "sections/section_base.html" %}
+
+
+{% block section_id %}produkte{% endblock section_id%}
+
+{% block section_single_text %}
+
+{% call editable_macro.render_editable(self.section_id()+'-first-parag', class='editable first-parag',
+									node='div', append=elements.read_btn("more")) %}
+									
+<p>Unsere Olivenöle ORO MESSAPICO sind ein reines Naturprodukt, gewonnen durch Sonne, Wasser,
+und viel Leidenschaft. Sie sind absolut naturbelassen (naturale), also ohne Einsatz von chemischen 
+Produkten, die selbst im biologischen Anbau zugelassen wären. Wer uns kennt, weiß, daß wir als 
+Dünger für die Ölbäume nur den Stallmist unserer Langohren benutzen, die sich ausschließlich von 
+biologischen Futter ernähren.</p>
+<ul>
+<li><p><b>ORO MESSAPICO MILLENIUM</b> ist ein naturtrübes Öl ausschließlich aus 1000-jährigen Bäumen. Es
+	ist fruchtig mit delikatem Olivengeschmack und typischem, leicht scharfem Nachgeschmack. Es 
+	wird auf antike Weise traditionell in der Steinmühle gemahlen, von Hand abgeschöpft und auf 
+	natürliche Weise dekantiert.</p>
+	<p>ORO MESSAPICO MILLENIUM wird in einer Geschenkbox aus Holz angeboten. Sie beinhaltet eine
+		0,5 l Dose mit Olivenöl MILLENIUM, ein 0,1 l Fläschchen als Sichtprobe und eine antikisierte 
+		Amphore aus Keramik mit Unterteller und Verschlusskorken.</p>
+	</li>
+<li><p><b>ORO MESSAPICO PRIMITIVO</b> ist ein mittelkräftiges, naturtrübes Olivenöl mit leicht samtenem 
+	Geschmack nach frischen Oliven. Es wird in der Steinmühle gemahlen und anschließend im 
+	Dekanter separiert.</p></li>
+<li><p><b>ORO MESSAPICO EVOLUTION</b> ist ein klares Olivenöl mit reichhaltigem fruchtigem und bitter-scharfem 
+	Aroma nach frischen Oliven und Gras. Es wird in der Extraktionsmühle gewonnen, anschließend separiert und gefiltert.</p></li>
+</ul>
+
+{% endcall %}
+<img src="{{theme}}/img/prodotto-foto.png" width="100%"/>
+{% call editable_macro.render_editable(self.section_id()+'-hidden-parag-', class='editable hidden-parag', 
+			append=elements.read_btn("less")) %}
+			
+<p>Je anonymer ein Etikett ist, desto unwahrscheinlicher ist eine gute Qualität. Deshalb finden sie auf 
+	unserem Etikett den Namen unseres Betriebes, den Namen der Ölmühle, die Herkunfts-bezeichnung und den 
+	Erntejahrgang. Nach jeder neuen Ernte bieten wir Verkostungen unserer Öle an; all dies hilft Ihnen, 
+	gutes Öl zu finden. Der perfekte Moment um Olivenöl zu probieren ist vormittags, am besten vor dem Essen, 
+	wenn ihre Geschmackspapillen noch nicht von anderen Geschmäckern beeinträchtigt sind und sehr intensiv 
+	auf eine geschmackliche Stimulierung reagieren.</p>
+	
+{% endcall %}
+	
+{% endblock %}

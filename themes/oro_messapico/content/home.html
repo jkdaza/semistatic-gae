@@ -1,0 +1,50 @@
+{% extends "layout/base.html" %}
+
+{% block header %}
+<!-- Header -->
+<header>	
+	<div class="row">
+		<div class="col-md-5"></div>
+		<div class="col-md-2 text-center">
+		{{ elements.logo(color="white") }}
+		<div class="dots"><img src="{{theme}}/img/dots.png" alt="Oro messapico Dots" width="50" /></div>
+		</div>
+		<div class="col-md-5"></div>
+	</div>
+</header>
+{% endblock%}
+
+{% block lower_title %}
+<div class="row lower-title-container">
+	<div class="text-center lower-title">
+		<img src="{{theme}}/img/culturaolio.png" alt="Oro messapico - La Cultura dell'Olio d'Oliva" width="85%" />
+	</div>
+</div>
+{% endblock%}
+
+{% block page_content %}
+<div class="container">
+	<div class="row home-section">
+		<div class="col-md-4"></div>
+		<div class="col-md-4 text-center">
+			{{ elements.drawing(name="vaso-greco-black",width=80) }}
+		</div>
+		<div class="col-md-4"></div>
+	</div>
+	<div class="row home-section">
+		<div class="col-md-3"></div>
+		<div class="col-md-6 text-center parag-text">
+				<p>&laquo;Wenn Du jedes Blatt für sich allein sehen kannst, siehst Du den Baum. Wenn Du den Baum sehen kannst, 
+					siehst Du die Seele des Baumes, wenn Du die Seele des Baumes sehen kannst, kannst Du mit ihm sprechen; 
+					und vielleicht fängst Du an, etwas von ihm zu lernen&raquo;</p>
+				<div class="text-right">(Weisheit der Yurok)</div>
+		</div>
+		<div class="col-md-3"></div>
+	</div>
+</div>
+<div class="section-foot-upper"></div>
+{% endblock%}
+
+{% block footer %}
+	{{ elements.section_footer(home=True) }}
+{% endblock%}

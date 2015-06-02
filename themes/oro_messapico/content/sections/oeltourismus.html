@@ -1,0 +1,37 @@
+{% extends "sections/section_base.html" %}
+
+{% block section_id %}oeltourismus{% endblock section_id%}
+
+{% block section_single_text %}
+
+{% call editable_macro.render_editable(self.section_id()+'-first-parag', class='editable first-parag',
+									node='p', append=elements.read_btn("more")) %}      		
+
+	Möchten sie gerne mal in die Geheimnisse der apulischen Küche eintauchen oder bei einer
+	Olivenernte aktiv mit anpacken und dann am Kamin bei einer traditionellen Ölverkostung 
+	erfahren, was ein wirklich gutes Olivenöl ausmacht? Dann kommen sie doch nach Apulien und 
+	lassen sich von den einzigartigen Gerüchen, Geschmäckern, Geräuschen, Farben und Formen 
+	dieser wunderbaren Region berauschen.
+
+{% endcall %}
+<img src="{{theme}}/img/fiat-500.jpg" width="100%"/>
+{% call editable_macro.render_editable(self.section_id()+'-hidden-parag-', class='editable hidden-parag', 
+			append=elements.read_btn("less")) %}
+	<p>Die Region Apulien, an der südlichen Grenze Europas mitten im Mittelmeerraum gelegen und nach 
+		Osten hin ins Meer vorgestreckt, war seit jeher eine Brücke zwischen Orient und Okzident und 
+		dank ihrer geographischen Lage eine Landstrich, in dem Handel und kultureller Austausch blühten.</p>
+	<p>Das, was unterschiedliche Kulturen im Laufe der Jahrtausende an kulinarischen Eigenheiten und 
+		Traditionen mitgebracht haben, verschmilzt hier zu einer ursprünglichen, abwechslungsreichen 
+		und für viele überraschenden Küche. Zentrales Element ist dabei immer Olivenöl, das mediterrane 
+		Lebenselixier schlechthin!</p>
+	<p>Wir organisieren ihnen ein Erlebnis rund ums Olivenöl. Ob eine 7- tägige Kochkurswoche, eine 
+		Woche zur Olivenernte, eine professionelle Ölverkostung oder einfach nur einen einzelnen Koch-oder 
+		Erntetag, der ihren Ferienaufenthalt bereichert. Wir haben immer eine gute Idee; fragen sie einfach nach!
+	</p>
+{% endcall %}
+{% endblock%}
+
+
+{% block section_drawing %}
+
+{% endblock section_drawing%}

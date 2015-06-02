@@ -1,0 +1,115 @@
+{% set active_page = active_page|default(homepage) -%}
+{% set navigation = [
+    ('#inspiration', 'inspiration', 'Inspiration'),
+    ('#geschichte', 'geschichte', 'Geschichte'),
+    ('#oelmanufaktur', 'oelmanufaktur', 'Öelmanufaktur'),
+    ('#produkte', 'produkte', 'Olivenöle'),
+    ('#oeltourismus', 'oeltourismus', 'Öeltourismus'),
+    ('#gallery', 'gallery', 'Gallery'),
+    ('#kontakt', 'kontakt', 'Kontakt')
+] -%}
+
+{% import 'macros/elements.html' as elements with context %}
+{% import 'macros/editable.html' as editable_macro with context %}
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		
+		<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <meta name="description" content="Wenn Du jedes Blatt für sich allein sehen kannst, siehst Du den Baum. Wenn Du den Baum sehen kannst, 
+					siehst Du die Seele des Baumes, wenn Du die Seele des Baumes sehen kannst, kannst Du mit ihm sprechen; 
+					und vielleicht fängst Du an, etwas von ihm zu lernen">
+    <meta name="author" content="Oro Messapico">
+    <meta name="keywords" content="Oro Messapico, olio, Puglia, olive oil, Apulia, Apulien, olivenöl, turism, oeltourismus, oelmanufaktur, geschichte">
+    
+    <title>{% block title %}Oro Messapico{% endblock%}</title>
+   
+		<!-- Bootstrap Core CSS -->
+    <link href="{{theme}}/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{{theme}}/css/oromessapico.css?{{ range(100)|random}}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/{{theme}}/css/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+		{% if not globals.user_is_admin %} 
+		<style type="text/css">
+			.hidden-parag {display:none;}
+		</style>
+		{% endif %}
+	</head>
+	<body id="page-top" class="index {{active_page}}" data-pageid={{active_page}}>
+    <!-- Navigation -->
+		{% include "navigation/top_navigation.html" with context %}
+    
+    
+		{% block header %}{% endblock%}
+		{% block lower_title %}{% endblock%}		
+		
+		<div class="section-head-upper"></div>
+		<div class="section-head-lower"></div>
+		
+		{% block page_content %}{% endblock%}
+		
+		{% block footer %}{% endblock%}
+     
+		
+		
+    <!-- jQuery -->
+    <script src="{{theme}}/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{theme}}/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="{{theme}}/js/classie.js"></script>
+    {% if active_page == 'home' %}
+    <script src="{{theme}}/js/cbpAnimatedHeader.js"></script>
+    {% endif %}
+    <script src="{{theme}}/js/css-element-queries/ResizeSensor.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <!-- <script src="{{theme}}/js/jqBootstrapValidation.js"></script>
+    <script src="{{theme}}/js/contact_me.js"></script>-->
+    
+   
+		<!-- Custom Theme JavaScript -->
+    <script src="{{theme}}/js/oromessapico.js?{{ range(100)|random}}"></script>
+    
+    <!-- Google Analytics -->
+    <script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		
+		  ga('create', 'UA-61688110-1', 'auto');
+		  ga('send', 'pageview');
+		
+		</script>
+		{% if globals.user_is_admin %}
+		<div class="container admin-badge alert alert-warning" data-role="alert">
+		  <h6>Modalità Admin Abilitata</h6>
+		  <p><small>Per vedere il sito come un utente finale vai su Admin e Logout.</small></p>
+		  <p class="text-center"><a class="btn btn-primary btn-lg" href="/admin" role="button">Admin</a></p>
+		</div>
+		{% endif %}
+		
+	</body>
+
+</html>

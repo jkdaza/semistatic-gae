@@ -1,0 +1,40 @@
+{% extends "sections/section_base.html" %}
+{% block section_id %}inspiration{% endblock section_id%}
+
+{% block section_single_text %}
+
+{% call editable_macro.render_editable(self.section_id()+'-first-parag', class='editable first-parag',
+									node='p', append=elements.read_btn("more")) %}      		
+&laquo;Zu einem Olivenbaum fühlt man sich hingezogen, wegen seiner bodenständigen Kraft 
+und der Ruhe, die er dank seines langsamen Wuchses ausstrahlt; wegen seiner 
+Überlebensfähigkeit durch ständige Erneuerung aus dem Stamm heraus und wegen 
+seines Alter, das viel Weisheit spüren läßt.&raquo;	
+
+{% endcall %}
+
+{% call editable_macro.render_editable(self.section_id()+'-hidden-parag-', class='editable hidden-parag', 
+			append=elements.read_btn("less")) %}
+			
+	<p>
+	Die Begegnung mit den jahrtausendalten Ölbäumen Apuliens, den sogenannten &ldquo;Giganten des 
+	Mittelmeers&rdquo;, hat etwas Magisches. In unendlichen, silbergrünen Wäldern bedecken sie die 
+	Abhänge der Murge, die durchzogen von weißem Kalkstein und roter Erde bis zum Meer reicht, 
+	welches tiefblau den Hintergrund bildet. Dieser Anblick ist einfach überwältigend.
+	</p>
+	<p>Im Angesicht eines Ölbaums stehen wir vor dem Spiegel unserer eigenen Kulturgeschichte. Im Holz 
+		seines mächtigen Baumstamms eingeritzt, erzählt er uns die über 3000 Jahre alte Geschichte 
+		unserer Vorfahren. Das faszinierendste dabei ist, dass wir heute von denselben Bäumen, von 
+		denen lange vor den Griechen und Römern schon die Messapier Öl gewonnen haben, immer noch 
+		Olivenöl erhalten. Welch andere Pflanze der Welt kann sich rühmen, dieses Privileg zu haben?</p>
+	<p>Unser Projekt ORO MESSAPICO wuchs aus der Begeisterung für diese lebendigen Erben der 
+		Vergangenheit und dem Wunsch, die Kulturgeschichte dieser uralten Ölbäume in einem 
+		besonderen Olivenöl zu verewigen. Die Einmaligkeit unseres Olivenöls ist, daß es von Bäumen 
+		stammt, die uns nicht nur ihr Öl, sondern auch ihre Lebensgeschichte schenken. Diese Bäume zu 
+		pflegen und am Leben zu erhalten, heißt gleichzeitig unsere eigene Identität zu erhalten.
+	</p>
+{% endcall %}
+{% endblock%}
+
+{% block section_drawing %}
+	{{ elements.drawing(name="homusolive") }}
+{% endblock section_drawing%}

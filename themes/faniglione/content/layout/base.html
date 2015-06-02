@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<!--
+	Monochromed by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>{% block title %}{% endblock title%}</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+		<!--[if lte IE 8]><script src="/templated-monochromed/js/html5shiv.js"></script><![endif]-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript">window.theme_globals = {'theme' : '{{ theme }}'};</script>
+		<script src="/templated_monochromed/js/skel.min.js"></script>
+		<script src="/templated_monochromed/js/skel-panels.min.js"></script>
+		<script src="/templated_monochromed/js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="/templated-monochromed/css/skel-noscript.css" />
+			<link rel="stylesheet" href="/templated-monochromed/css/style.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="/templated-monochromed/css/ie/v8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="/templated-monochromed/css/ie/v9.css" /><![endif]-->
+	</head>
+	<body {% block bodyclass %}{% endblock bodyclass %}>
+
+	<!-- Header -->
+		<div id="header">
+			<div class="container">
+					
+				<!-- Logo -->
+					<div id="logo">
+						<h1><a href="#">Dario Faniglione</a></h1>
+						<span>Learning Technologist</span>
+					</div>
+				
+				<!-- Nav -->
+				{% include "navigation/top_navigation.html" with context %}
+
+			</div>
+		</div>
+	<!-- Header -->
+			
+	<!-- Main -->
+		<div id="main">
+		{% block content %}{% endblock content%}
+		</div>
+	<!-- Main -->
+
+	<!-- Footer -->
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="3u">
+						
+							Find me on <a href="https://twitter.com/DarioFaniglione">Twitter</a>
+					
+					</div>
+					<div class="3u">
+						
+							Find me on <a href="Update your public profile settingsuk.linkedin.com/pub/dario-faniglione/92/106/850/en">Linkedin</a>
+									
+					</div>
+					<div class="6u">
+						
+							&copy; 2015 Dario Faniglione
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- Footer -->
+
+	<!-- Copyright -->
+		<div id="copyright">
+			<div class="container">
+				Powerd by: <a href="https://github.com/jkdaza/semistatic-gae">SEMISTATIC-GAE</a> by <a href="/">Dario Faniglioneå</a>
+			</div>
+			<div class="container">
+				Design: <a href="http://templated.co">TEMPLATED</a> Images: <a href="http://unsplash.com">Unsplash</a> (<a href="http://unsplash.com/cc0">CC0</a>)
+			</div>
+		</div>
+
+	</body>
+</html>
